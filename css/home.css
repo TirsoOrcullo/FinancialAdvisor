@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
+body,
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-
 li {
     list-style: none;
 }
@@ -30,13 +31,13 @@ img {
 }
 
 /* Home */
-#title {
+section.home {
     width: 100%;
     height: 100vh;
     background: url(../img/Background.jpg)no-repeat center center/cover;
 }
 
-#title::after {
+section.home::after {
     content: '';
     position: absolute;
     top: 0;
@@ -46,10 +47,10 @@ img {
     background: rgba(0,0,0,0.5);
 }
 
-#title .title-navbar {
+section.home .title-navbar {
     width: 100%;
-    height: 80px;
-    padding: 1% 0;
+    height: 10vh;
+    padding: 0 0 1% 0;
     position: fixed;
     z-index: 2;
     background: rgba(0,0,0,0.5);
@@ -60,7 +61,7 @@ img {
     grid-template-columns: 10px 1fr auto 10px;
 }
 
-#title .logo-container {
+section.home .logo-container {
     height: 60px;
 
     /* Grid */
@@ -68,7 +69,7 @@ img {
     grid-column: 2/3;
 }
 
-#title .logo-container h3 {
+section.home .logo-container h3 {
     margin-left: 50px;
     height: 60px;
     color: white;
@@ -76,8 +77,8 @@ img {
     padding-top: 18px;
 }
 
-#title .logo-container h3:hover {
-    font-size: 2rem;
+section.home .logo-container h3:hover {
+    font-size: 1.2rem;
 }
 
 /* Menu Container */
@@ -101,46 +102,56 @@ section.home .menu-container a{
     margin: 0;
 }
 
-#title .menu-container li:hover {
+section.home .menu-container li:hover {
     font-size: 1.3rem;
 }
 
 /* Home content */
-#title .home-content {
+section.home .home-content {
     position: relative;
     z-index: 1;
 }
 
-#title .cover-container img {
-    margin-top: 15%;
+.home-content .cover-container img {
+    margin: 25px 0 0 0;
     width: 400px;
-    height: 600px;
+    height: 580px;
 }
 
-#title .content {
-    padding-top: 30%;
+section.home .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#title .content-container {
+section.home .content-container {
+    height: 100vh;
     padding: 0 3%;
 }
 
-#title .content h1,
-#title .content h3 {
+section.home .content h1,
+section.home .content h3 {
     color: #fff;
     padding: 0.5rem;
 }
 
-#title .content h1 {
+section.home .cover-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.home .content h1 {
     font-size: 4.5rem;
     line-height: 1;
 }
 
-#title .content h3 {
+section.home .content h3 {
     font-size: 1.8rem;
 }
 
-#title .content-container {
+section.home .content-container {
     /* grid */
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -149,30 +160,30 @@ section.home .menu-container a{
 }
 
 /* WhyUs */
-#why-Us {
+section.whyUs {
     width: 100%;
     height: auto;
     background-image: radial-gradient(circle at 57% 36%, hsla(263,0%,78%,0.04) 0%, hsla(263,0%,78%,0.04) 10%,transparent 10%, transparent 100%),radial-gradient(circle at 22% 61%, hsla(263,0%,78%,0.04) 0%, hsla(263,0%,78%,0.04) 36%,transparent 36%, transparent 100%),radial-gradient(circle at 68% 97%, hsla(263,0%,78%,0.04) 0%, hsla(263,0%,78%,0.04) 41%,transparent 41%, transparent 100%),radial-gradient(circle at 57% 89%, hsla(263,0%,78%,0.04) 0%, hsla(263,0%,78%,0.04) 30%,transparent 30%, transparent 100%),radial-gradient(circle at 39% 80%, hsla(263,0%,78%,0.04) 0%, hsla(263,0%,78%,0.04) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 88% 71%, hsla(263,0%,78%,0.04) 0%, hsla(263,0%,78%,0.04) 30%,transparent 30%, transparent 100%),linear-gradient(0deg, rgb(255,255,255),rgb(255,255,255));
 }
 
-#why-Us .whyUs-container {
+section.whyUs .whyUs-container {
     padding: 3% 5%;
     text-align: center;
 }
 
-#why-Us h1 {
+section.whyUs h1 {
     text-align: center;
     padding: 1%;
     font-size: 3rem;
 }
 
-#why-Us .whyUs-photo img {
+section.whyUs .whyUs-photo img {
     width: 350px;
     height: 350px;
     border-radius: 5px;
 }
 
-#why-Us .whyUs-container {
+section.whyUs .whyUs-container {
     /* Grid */
     display: grid;
     grid-template-rows: auto;
@@ -180,7 +191,7 @@ section.home .menu-container a{
     grid-template-areas: "box1 box2 box3";
 }
 
-#why-Us .whyUs-photo {
+section.whyUs .whyUs-photo {
     position: relative;
     display: inline-block;
 }
@@ -206,19 +217,19 @@ section.home .menu-container a{
 }
 
 /* Contact */
-#contacts {
+section.contact {
     width: 100%;
     height: auto;
     background-image: linear-gradient(45deg, transparent 0%, transparent 55%,rgba(64, 64, 64,0.04) 55%, rgba(64, 64, 64,0.04) 76%,transparent 76%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 14%,rgba(64, 64, 64,0.04) 14%, rgba(64, 64, 64,0.04) 41%,transparent 41%, transparent 100%),linear-gradient(45deg, transparent 0%, transparent 2%,rgba(64, 64, 64,0.04) 2%, rgba(64, 64, 64,0.04) 18%,transparent 18%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 61%,rgba(64, 64, 64,0.04) 61%, rgba(64, 64, 64,0.04) 71%,transparent 71%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
 }
 
-#contacts h1 {
+section.contact h1 {
     text-align: center;
     font-size: 3rem;
     line-height: 1.5;
 }
 
-#contacts .contact-container {
+section.contact .contact-container {
     padding: 3% 5%;
 
     /* Grid */
@@ -228,7 +239,7 @@ section.home .menu-container a{
     grid-template-areas: "box1 box2";
 }
 
-#contacts .contact-info {
+section.contact .contact-info {
     padding: 2%;
     margin: 2%;
     border-radius: 5px;
@@ -236,25 +247,25 @@ section.home .menu-container a{
     box-shadow: 1px 1px 6px 1px #000000;
 }
 
-#contacts .contact-info h2 {
+section.contact .contact-info h2 {
     padding: 2rem;
     font-size: 2rem;
     line-height: 1;
 }
 
-#contacts .contact-info p {
+section.contact .contact-info p {
     font-size: 1.5rem;
     padding: 2%;
 }
 
 /* Footer */
-section#footer {
+section.footer {
     width: 100%;
     height: auto;
     background: rgba(0,0,0,0.9);
 }
 
-section#footer .footer-container {
+section.footer .footer-container {
     padding: 3% 5%;
     color: white;
 
@@ -265,17 +276,17 @@ section#footer .footer-container {
     grid-template-areas: "box1 box2";
 }
 
-section#footer .footer-container li {
+section.footer .footer-container li {
     font-size: 1.3rem;
     padding: 5px;
     line-height: 1;
 }
 
-section#footer .footer-container a {
+section.footer .footer-container a {
     color: white;
 }
 
-section#footer .footer-container a:hover {
+section.footer .footer-container a:hover {
     font-size: 1.9rem;
 }
 
@@ -284,22 +295,22 @@ section#footer .footer-container a:hover {
 @media (max-width: 992px) and (min-width: 767px) {
 
     /* home */
-    #title .content h1 {
+    section.home .content h1 {
         font-size: 4.2rem;
         line-height: 1;
     }
     
-    #title .content h3 {
+    section.home .content h3 {
         font-size: 1.6rem;
     }
 
-    #title .cover-container img {
+    section.home .cover-container img {
         width: 350px;
         height: 550px;
     }
 
     /* Why-Us */
-    #why-Us .whyUs-container {
+    section.whyUs .whyUs-container {
         /* Grid */
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -309,7 +320,7 @@ section#footer .footer-container a:hover {
         "box3 box3";
     }
 
-    #why-Us .whyUs-photo img {
+    section.whyUs .whyUs-photo img {
         width: 330px;
         height: 330px;
         border-radius: 5px;
@@ -378,22 +389,22 @@ section#footer .footer-container a:hover {
 
 
     /* home */
-    #title .content h1 {
+    section.home .content h1 {
         font-size: 3.8rem;
         line-height: 0.8;
     }
     
-    #title .content h3 {
+    section.home .content h3 {
         font-size: 1.3rem;
     }
 
-    #title .cover-container img {
-        width: 350px;
+    section.home .cover-container img {
+        width: 400px;
         height: 550px;
     }
 
     /* Why-Us */
-    #why-Us .whyUs-container {
+    section.whyUs .whyUs-container {
         /* Grid */
         display: grid;
         grid-template-rows: auto;
@@ -404,11 +415,11 @@ section#footer .footer-container a:hover {
         "box3";
     }
 
-    #why-Us .whyUs-photo {
+    section.whyUs .whyUs-photo {
         margin: 2%;
     }
 
-    #why-Us .whyUs-photo img {
+    section.whyUs .whyUs-photo img {
         width: 350px;
         height: 350px;
         border-radius: 5px;
@@ -419,7 +430,7 @@ section#footer .footer-container a:hover {
     }
 
     /* contacts */
-    #contacts .contact-container {
+    section.contact .contact-container {
         padding: 3% 5%;
     
         /* Grid */
@@ -431,7 +442,7 @@ section#footer .footer-container a:hover {
          "box2";
     }
 
-    section#footer .footer-container li {
+    section.footer .footer-container li {
         font-size: 1rem;
         padding: 4px;
         line-height: 0.7;
@@ -494,48 +505,49 @@ section#footer .footer-container a:hover {
     }
 
      /* home */
-     #title .content h1 {
+    section.home .content h1 {
         font-size: 2rem;
         line-height: 0.8;
     }
     
-    #title .content h3 {
+    section.home .content h3 {
         font-size: 0.8rem;
     }
 
-    #title .content {
+    section.home .content {
         padding: 0;
         text-align: center;
     }
      
-    #title .content-container {
+    section.home .content-container {
         padding-top: 6rem;
         /* grid */
         display: grid;
         grid-template-columns: 1fr;
+        justify-content: center;
         grid-template-rows: auto;
         grid-template-areas:
         "box1" 
         "box2";
     }    
     
-    #title .content h3 {
+    section.home .content h3 {
         font-size: 1.3rem;
     }
 
-    #title .cover-container {
-        margin-left: 60px;
+    section.home .cover-container {
+        display: flex;
+        justify-content: center;
+        align-items: unset;
     }
 
-    #title .cover-container img {
-        padding: 0;
-        margin: 0;
-        width: 350px;
-        height: 450px;
+    section.home .cover-container img {
+        width: 250px;
+        height: 400px;
     }
 
     /* Why-Us */
-    #why-Us .whyUs-container {
+    section.whyUs .whyUs-container {
         /* Grid */
         display: grid;
         grid-template-rows: auto;
@@ -546,12 +558,12 @@ section#footer .footer-container a:hover {
         "box3";
     }
 
-    #why-Us .whyUs-photo {
+    section.whyUs .whyUs-photo {
         margin: 2%;
     }
 
-    #why-Us .whyUs-photo img {
-        width: 350px;
+    section.whyUs .whyUs-photo img {
+        width: 320px;
         height: 350px;
         border-radius: 5px;
     }
@@ -561,7 +573,7 @@ section#footer .footer-container a:hover {
     }
 
     /* contacts */
-    #contacts .contact-container {
+    section.contact .contact-container {
         padding: 3% 5%;
     
         /* Grid */
@@ -573,13 +585,13 @@ section#footer .footer-container a:hover {
          "box2";
     }
 
-    section#footer .footer-container li {
+    section.footer .footer-container li {
         font-size: 1rem;
         padding: 3px;
         line-height: 0.7;
     }
 
-    section#footer .footer-container {
+    section.footer .footer-container {
         /* grid */
         display: grid;
         grid-auto-flow: row;
@@ -589,7 +601,7 @@ section#footer .footer-container a:hover {
          "box2";
     }
 
-    section#footer .footer-content {
+    section.footer .footer-content {
         padding: 5px;
     }
 }
