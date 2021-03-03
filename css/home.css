@@ -178,9 +178,10 @@ section.whyUs h1 {
 }
 
 section.whyUs .whyUs-photo img {
-    width: 350px;
+    width: 320px;
     height: 350px;
     border-radius: 5px;
+    margin: 0 15px;
 }
 
 section.whyUs .whyUs-container {
@@ -324,6 +325,7 @@ section.footer .footer-container a:hover {
         width: 330px;
         height: 330px;
         border-radius: 5px;
+        margin: 0 20px;
     }
 
     .whyUs-photo .whyUs-text {
@@ -543,7 +545,7 @@ section.footer .footer-container a:hover {
 
     section.home .cover-container img {
         width: 250px;
-        height: 400px;
+        height: 380px;
     }
 
     /* Why-Us */
@@ -563,7 +565,7 @@ section.footer .footer-container a:hover {
     }
 
     section.whyUs .whyUs-photo img {
-        width: 320px;
+        width: 300px;
         height: 350px;
         border-radius: 5px;
     }
